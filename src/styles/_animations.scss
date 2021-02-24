@@ -1,0 +1,35 @@
+@mixin animationDelay($delayFrom, $itemsNumber) {
+	$i: 1;
+	@for $i from 1 through $itemsNumber {
+		&:nth-child(#{$i}) {
+			animation-delay: #{$delayFrom}s;
+		}
+		$delayFrom: $delayFrom + .08;
+	}
+}
+
+@keyframes fadeFromBottom {
+	from {
+		transform: translateY(10px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes footer {
+	to {
+		bottom: -100px;
+	}
+}
