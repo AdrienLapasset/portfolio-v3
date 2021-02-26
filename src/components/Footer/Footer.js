@@ -86,15 +86,11 @@ class Footer extends Component {
 		return (
 			<div
 				onClick={this.toggleFooter}
-				className={`Footer 
-				${this.state.isShowed ? 'Footer--show' : ''}
-				${!this.props.isTouch ? 'Footer--transition' : ''}`}
-				style={{ transform: `translateY(${this.state.positionY}px)` }}
-			>
+				className="Footer">
 				<h2 className="Footer__title">Ils m'ont fait confiance</h2>
 				<LogoSlider
 					footerPos={this.state.positionY}
-					isShowed={this.state.isShowed}
+					isShowed={true}
 					isTouched={this.handleLogoTouched}
 				/>
 			</div>

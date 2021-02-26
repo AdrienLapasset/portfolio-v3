@@ -32,6 +32,7 @@ class LogoSlider extends Component {
 
 	componentDidMount() {
 		this.logoNb = this.state.companyList.length;
+		this.slide();
 	}
 
 	componentDidUpdate(prevProps) {

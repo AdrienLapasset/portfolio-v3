@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import Observer from 'fontfaceobserver';
+
 import Header from '../components/Header/Header';
 import Home from '../components/Home/Home';
 import Footer from '../components/Footer/Footer';
-import Observer from 'fontfaceobserver';
+import Projects from '../components/Projects';
 
 class App extends Component {
 	constructor(props) {
@@ -104,6 +106,7 @@ class App extends Component {
 						isShowed={this.handleFooterShowed}
 					/>
 				) : null : null}
+				<Projects />
 			</div>
 		);
 	}
