@@ -1,9 +1,7 @@
 import React from 'react';
+import styled from 'styled-components'
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
 
-
-import './index.scss';
 import Project from './Project';
 
 const Projects = () => {
@@ -31,27 +29,30 @@ const Projects = () => {
 
   const projects = data.allMarkdownRemark.nodes
   const projectsRender = projects.map((project, index) => {
-    const categories = project.frontmatter.categories
-    console.log(project)
-    const categoriesRender = categories.map((category, index) => {
-      return (<div>{category}</div>)
-    })
     return (
-      <div key={index} >
-        {categoriesRender}
-        {project.frontmatter.description}
-        <Img fluid={project.frontmatter.featuredImage.childImageSharp.fluid} />
-      </div>
+      <Project key={index} project={project} />
     )
   })
 
   return (
-    <section>
-      <h2>Mes plus beaux projets :</h2>
+    <StyledSection>
+      <Styledh2>Mes plus beaux projets :</Styledh2>
       {projectsRender}
-      <Project />
-    </section>
+    </StyledSection>
   );
 }
+
+const StyledSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto;
+  width: 1080px;
+`
+const Styledh2 = styled.h2`
+  font-size: 60px;
+  margin-bottom: 80px;
+`
 
 export default Projects
