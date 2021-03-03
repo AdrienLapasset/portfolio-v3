@@ -8,9 +8,13 @@
 		& > * {
 			stroke-dasharray: 1000;
 			stroke-dashoffset: 1000;
-
 			animation: dash 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 			@include animationDelay(0.5, 100);
+			&.revert:not(.oneZeroBlock, .cube) {
+				stroke-dashoffset: 0;
+				animation: fadeOut 0.1s forwards;
+				animation-delay: 0s;
+			}
 		}
 	}
 
@@ -46,6 +50,12 @@
 @keyframes dash {
 	to {
 		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes dashRevert {
+	to {
+		stroke-dashoffset: 1000;
 	}
 }
 

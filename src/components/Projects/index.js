@@ -16,7 +16,7 @@ const Projects = () => {
             categories
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 800) {
+                fluid(quality: 90) {
                   ...GatsbyImageSharpFluid
                 }
               }

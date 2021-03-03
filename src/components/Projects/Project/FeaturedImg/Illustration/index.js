@@ -17,8 +17,8 @@ const Illustration = ({ className }) => {
 
 const StyledSvg = styled.svg`
   position: absolute;
-  top: -15px;
-  left: -15px;
+  top: -10px;
+  left: -10px;
   stroke-dasharray: 752;		
   stroke-dashoffset: 1910;
   transition: stroke-dashoffset .4s ease-out;		

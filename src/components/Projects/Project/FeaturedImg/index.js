@@ -9,19 +9,36 @@ const FeaturedImg = ({ project }) => {
     <StyledContainer>
       <Illustration />
       <StyledImageContainer fluid={project.frontmatter.featuredImage.childImageSharp.fluid}>
+        <StyledDarken />
         <StyledTitle>{project.frontmatter.title}</StyledTitle>
       </StyledImageContainer>
     </StyledContainer>
   );
 }
 
+const StyledDarken = styled.div`
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all .2s linear;
+`
+
 const StyledContainer = styled.div`
   position: relative;
-  flex: 0 0 454px;
-  &:hover svg{
-    stroke-dashoffset: 0;		
-  }
+  flex: 0 0 464px;
   cursor: pointer;
+  &:hover {
+    ${StyledDarken} {
+      opacity: 0;
+    }
+     svg {
+      stroke-dashoffset: 1440;		
+    }
+  }
 `
 const StyledImageContainer = styled(BackgroundImage)`
   display: flex;
@@ -34,6 +51,7 @@ const StyledImageContainer = styled(BackgroundImage)`
 const StyledTitle = styled.h3`
   color: white;
   font-size: 44px;
+  z-index: 1;
 `
 
 export default FeaturedImg;
