@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
+import breakpoint from 'styled-components-breakpoint';
 
 import Illustration from './Illustration';
 
@@ -35,8 +36,7 @@ const StyledTitle = styled.h3`
 const StyledContainer = styled.div`
   position: relative;
   width: 464px;
-  height: 100%;
-  padding: 10px 10px 0 10px;
+  height: 295px;
   max-height: 100%;
   transition: padding .4s ease-out, width .4s ease-out, max-height .4s ease-out;
   cursor: pointer;
@@ -55,6 +55,9 @@ const StyledContainer = styled.div`
       transform: translateY(-20px);
     }
   }
+  ${breakpoint('sm')`
+    padding: 10px 10px 0 10px;
+  `}
 `
 const StyledImageContainer = styled(BackgroundImage)`
   display: flex;

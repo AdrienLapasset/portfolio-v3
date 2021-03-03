@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint';
 
 import GithubIcon from '../../../assets/icons/github.js';
 import ArrowIcon from '../../../assets/icons/arrowIcon.js';
@@ -17,28 +18,28 @@ const Project = ({ project }) => {
   return (
     <StyledContainer>
 
+      {/* Left */}
       <StyledLink href={project.siteUrl} target="_blank"
         rel="noopener noreferrer">
         <FeaturedImg project={project} />
       </StyledLink>
 
+      {/* Right */}
       <StyledInfoContainer>
         <StyledCategoryContainer>
           {categoriesRender}
         </StyledCategoryContainer>
         <p>{project.description}</p>
-
         <StyledIconsContainer>
           <StyledIconContainer href={project.repoUrl} target="_blank"
             rel="noopener noreferrer">
-            <StyledGithubIcon />
+            <GithubIcon />
           </StyledIconContainer>
           <StyledIconContainer href={project.siteUrl} target="_blank"
             rel="noopener noreferrer" >
             <ArrowIcon />
           </StyledIconContainer>
         </StyledIconsContainer>
-
       </StyledInfoContainer>
 
     </StyledContainer>
@@ -47,29 +48,46 @@ const Project = ({ project }) => {
 
 const StyledContainer = styled.article`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: 100px;
   width: 100%;
-  height: 295px;
+  ${breakpoint('lg')`
+    flex-direction: row;
+  `}
 `
 const StyledInfoContainer = styled.aside`
   align-self: center;
-  p {
-    font-size: 24px
-  }
+  width: 100%;
+  max-width: 464px;
+  ${breakpoint('lg')`
+    flex: 0 0 50%;
+    padding-left: 20px;
+    p {
+      font-size: 24px
+    }
+  `}
 `
 const StyledCategoryContainer = styled.div`
   margin-bottom: 15px;
   > :not(:last-child) {
-    margin-right: 15px;
+    margin-right: 7px;
+    ${breakpoint('lg')`
+      margin-right: 15px;
+    `}
   }
 `
 const StyledLink = styled.a`
-  display: block;
-  flex: 0 0 540px;
+  display: flex;
+  justify-content: center;
   text-decoration: none;
-`
-const StyledGithubIcon = styled(GithubIcon)`
-  fill: red;
+  margin-bottom: 30px;
+  ${breakpoint('lg')`
+    flex: 0 0 50%;
+    padding-right: 20px;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  `}
 `
 const StyledIconContainer = styled.a`
   width: 38px;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint';
 
 const Illustration = ({ className }) => {
   return (
@@ -14,12 +15,16 @@ const Illustration = ({ className }) => {
 }
 
 const StyledSvg = styled.svg`
+  display: none;
   position: absolute;
   top: 0px;
   left: 0px;
   stroke-dasharray: 1260;		
   stroke-dashoffset: 0;
-  transition: stroke-dasharray .4s ease-out;		
+  transition: stroke-dasharray .4s ease-out;	
+  ${breakpoint('sm')`
+    display: block;
+  `}	
 `
 
 export default Illustration;
