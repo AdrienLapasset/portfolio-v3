@@ -8,7 +8,7 @@ const Projects = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: {fields: [frontmatter___id], order: DESC}) {
         nodes {
           frontmatter {
             title
