@@ -8,7 +8,7 @@ const FeaturedImg = ({ project }) => {
   return (
     <StyledContainer>
       <Illustration />
-      <StyledImageContainer fluid={project.featuredImage.childImageSharp.fluid}>
+      <StyledImageContainer preserveStackingContext fluid={project.featuredImage.childImageSharp.fluid}>
         <StyledDarken />
         <StyledTitle>{project.title}</StyledTitle>
       </StyledImageContainer>
@@ -25,6 +25,12 @@ const StyledDarken = styled.div`
   right: 0;
   background: rgba(0, 0, 0, 0.5);
   transition: all .2s linear;
+`
+const StyledTitle = styled.h3`
+  color: white;
+  font-size: 44px;
+  z-index: 1;
+  transition: opacity .4s ease-out, transform .4s ease-out;
 `
 const StyledContainer = styled.div`
   position: relative;
@@ -44,6 +50,10 @@ const StyledContainer = styled.div`
      svg {
       stroke-dasharray: 1490;		
     }
+    ${StyledTitle} {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
   }
 `
 const StyledImageContainer = styled(BackgroundImage)`
@@ -53,10 +63,6 @@ const StyledImageContainer = styled(BackgroundImage)`
   border-radius: 16px;
   overflow: hidden;
   height: 100%;
-`
-const StyledTitle = styled.h3`
-  color: white;
-  font-size: 44px;
   z-index: 1;
 `
 

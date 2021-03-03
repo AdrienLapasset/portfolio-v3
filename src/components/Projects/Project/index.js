@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components'
 
+import GithubIcon from '../../../assets/icons/github.js';
+import ArrowIcon from '../../../assets/icons/arrowIcon.js';
 import Category from './Category';
 import FeaturedImg from './FeaturedImg';
 
@@ -14,15 +16,31 @@ const Project = ({ project }) => {
 
   return (
     <StyledContainer>
-      <StyledLink href={project.siteUrl}>
+
+      <StyledLink href={project.siteUrl} target="_blank"
+        rel="noopener noreferrer">
         <FeaturedImg project={project} />
       </StyledLink>
+
       <StyledInfoContainer>
         <StyledCategoryContainer>
           {categoriesRender}
         </StyledCategoryContainer>
         <p>{project.description}</p>
+
+        <StyledIconsContainer>
+          <StyledIconContainer href={project.repoUrl} target="_blank"
+            rel="noopener noreferrer">
+            <StyledGithubIcon />
+          </StyledIconContainer>
+          <StyledIconContainer href={project.siteUrl} target="_blank"
+            rel="noopener noreferrer" >
+            <ArrowIcon />
+          </StyledIconContainer>
+        </StyledIconsContainer>
+
       </StyledInfoContainer>
+
     </StyledContainer>
   );
 }
@@ -49,6 +67,25 @@ const StyledLink = styled.a`
   display: block;
   flex: 0 0 540px;
   text-decoration: none;
+`
+const StyledGithubIcon = styled(GithubIcon)`
+  fill: red;
+`
+const StyledIconContainer = styled.a`
+  width: 38px;
+  height: 38px;
+  border-radius: 38px;
+  border: none;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background-color: black;
+  fill: white;
+  margin-right: 10px;
+`
+const StyledIconsContainer = styled.div`
+  margin-top: 20px;
+  display: flex;
 `
 
 export default Project;

@@ -53,7 +53,7 @@ const StyledSection = styled.section`
   width: 1080px;
 `
 const Styledh2 = styled.h2`
-  font-size: 60px;
+  font-size: 55px;
   margin-bottom: 80px;
 `
 
