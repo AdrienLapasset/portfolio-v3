@@ -5,7 +5,7 @@ import Category from './Category';
 import FeaturedImg from './FeaturedImg';
 
 const Project = ({ project }) => {
-  const categories = project.frontmatter.categories
+  const categories = project.categories
   const categoriesRender = categories.map((category, index) => {
     return (
       <Category category={category} />
@@ -14,12 +14,14 @@ const Project = ({ project }) => {
 
   return (
     <StyledContainer>
-      <FeaturedImg project={project} />
+      <StyledLink href={project.siteUrl}>
+        <FeaturedImg project={project} />
+      </StyledLink>
       <StyledInfoContainer>
         <StyledCategoryContainer>
           {categoriesRender}
         </StyledCategoryContainer>
-        <p>{project.frontmatter.description}</p>
+        <p>{project.description}</p>
       </StyledInfoContainer>
     </StyledContainer>
   );
@@ -32,7 +34,7 @@ const StyledContainer = styled.article`
   height: 295px;
 `
 const StyledInfoContainer = styled.aside`
-  padding-left: 50px;
+  align-self: center;
   p {
     font-size: 24px
   }
@@ -42,6 +44,11 @@ const StyledCategoryContainer = styled.div`
   > :not(:last-child) {
     margin-right: 15px;
   }
+`
+const StyledLink = styled.a`
+  display: block;
+  flex: 0 0 540px;
+  text-decoration: none;
 `
 
 export default Project;

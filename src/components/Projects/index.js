@@ -14,6 +14,8 @@ const Projects = () => {
             title
             description
             categories
+            siteUrl
+            repoUrl
             featuredImage {
               childImageSharp {
                 fluid(quality: 90) {
@@ -30,7 +32,7 @@ const Projects = () => {
   const projects = data.allMarkdownRemark.nodes
   const projectsRender = projects.map((project, index) => {
     return (
-      <Project key={index} project={project} />
+      <Project key={index} project={project.frontmatter} />
     )
   })
 

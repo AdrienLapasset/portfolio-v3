@@ -8,9 +8,9 @@ const FeaturedImg = ({ project }) => {
   return (
     <StyledContainer>
       <Illustration />
-      <StyledImageContainer fluid={project.frontmatter.featuredImage.childImageSharp.fluid}>
+      <StyledImageContainer fluid={project.featuredImage.childImageSharp.fluid}>
         <StyledDarken />
-        <StyledTitle>{project.frontmatter.title}</StyledTitle>
+        <StyledTitle>{project.title}</StyledTitle>
       </StyledImageContainer>
     </StyledContainer>
   );
@@ -28,14 +28,15 @@ const StyledDarken = styled.div`
 `
 const StyledContainer = styled.div`
   position: relative;
-  flex: 0 0 464px;
+  width: 464px;
+  height: 100%;
   padding: 10px 10px 0 10px;
   max-height: 100%;
-  transition: padding .4s ease-out, flex .4s ease-out, max-height .4s ease-out;
+  transition: padding .4s ease-out, width .4s ease-out, max-height .4s ease-out;
   cursor: pointer;
   &:hover {
     max-height: 276px;
-    flex: 0 0 476px;
+    width: 476px;
     padding: 4px 4px 0 4px;
     ${StyledDarken} {
       opacity: 0;
