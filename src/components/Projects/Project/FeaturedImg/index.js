@@ -26,17 +26,22 @@ const StyledDarken = styled.div`
   background: rgba(0, 0, 0, 0.5);
   transition: all .2s linear;
 `
-
 const StyledContainer = styled.div`
   position: relative;
   flex: 0 0 464px;
+  padding: 10px 10px 0 10px;
+  max-height: 100%;
+  transition: padding .4s ease-out, flex .4s ease-out, max-height .4s ease-out;
   cursor: pointer;
   &:hover {
+    max-height: 276px;
+    flex: 0 0 476px;
+    padding: 4px 4px 0 4px;
     ${StyledDarken} {
       opacity: 0;
     }
      svg {
-      stroke-dashoffset: 1440;		
+      stroke-dasharray: 1490;		
     }
   }
 `
@@ -44,7 +49,7 @@ const StyledImageContainer = styled(BackgroundImage)`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
   height: 100%;
 `

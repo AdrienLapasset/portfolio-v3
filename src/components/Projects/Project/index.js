@@ -29,7 +29,7 @@ const StyledContainer = styled.article`
   display: flex;
   margin-bottom: 100px;
   width: 100%;
-  height: 280px;
+  height: 295px;
 `
 const StyledInfoContainer = styled.aside`
   padding-left: 50px;
