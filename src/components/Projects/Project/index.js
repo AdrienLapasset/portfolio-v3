@@ -7,7 +7,8 @@ import ArrowIcon from '../../../assets/icons/arrowIcon.js';
 import Category from './Category';
 import FeaturedImg from './FeaturedImg';
 
-const Project = ({ project }) => {
+const Project = ({ project, projectContent }) => {
+
   const categories = project.categories
   const categoriesRender = categories.map((category, index) => {
     return (
@@ -29,14 +30,12 @@ const Project = ({ project }) => {
         <StyledCategoryContainer>
           {categoriesRender}
         </StyledCategoryContainer>
-        <p>{project.description}</p>
+        <StyledContent dangerouslySetInnerHTML={{ __html: projectContent }} />
         <StyledIconsContainer>
-          <StyledIconContainer href={project.repoUrl} target="_blank"
-            rel="noopener noreferrer">
+          <StyledIconContainer href={project.repoUrl} target="_blank" rel="noopener noreferrer">
             <GithubIcon />
           </StyledIconContainer>
-          <StyledIconContainer href={project.siteUrl} target="_blank"
-            rel="noopener noreferrer" >
+          <StyledIconContainer href={project.siteUrl} target="_blank" rel="noopener noreferrer" >
             <ArrowIcon />
           </StyledIconContainer>
         </StyledIconsContainer>
@@ -64,8 +63,18 @@ const StyledInfoContainer = styled.aside`
   ${breakpoint('lg')`
     flex: 0 0 50%;
     padding-left: 20px;
-    p {
-      font-size: 24px
+  `}
+`
+const StyledContent = styled.div`
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  ${breakpoint('md')`
+    p, a {
+      font-size: 20px
     }
   `}
 `
@@ -74,7 +83,7 @@ const StyledCategoryContainer = styled.div`
   > :not(:last-child) {
     margin-right: 7px;
     ${breakpoint('lg')`
-      margin-right: 15px;
+      margin-right: 10px;
     `}
   }
 `
@@ -101,6 +110,9 @@ const StyledIconContainer = styled.a`
   background-color: black;
   fill: white;
   margin-right: 10px;
+  svg {
+    width: 18px;
+  }
 `
 const StyledIconsContainer = styled.div`
   margin-top: 20px;

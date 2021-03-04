@@ -11,9 +11,9 @@ const Projects = () => {
     query {
       allMarkdownRemark(sort: {fields: [frontmatter___id], order: DESC}) {
         nodes {
+          html
           frontmatter {
             title
-            description
             categories
             siteUrl
             repoUrl
@@ -33,7 +33,7 @@ const Projects = () => {
   const projects = data.allMarkdownRemark.nodes
   const projectsRender = projects.map((project, index) => {
     return (
-      <Project key={index} project={project.frontmatter} />
+      <Project key={index} projectContent={project.html} project={project.frontmatter} />
     )
   })
 
