@@ -53,6 +53,7 @@ const StyledContainer = styled.article`
   margin-bottom: 100px;
   width: 100%;
   ${breakpoint('lg')`
+    height: 290px;
     flex-direction: row;
   `}
 `

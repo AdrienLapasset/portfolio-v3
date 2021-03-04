@@ -36,7 +36,7 @@ const StyledTitle = styled.h3`
 const StyledContainer = styled.div`
   position: relative;
   width: 464px;
-  height: 295px;
+  height: 290px;
   max-height: 100%;
   transition: padding .4s ease-out, width .4s ease-out, max-height .4s ease-out;
   cursor: pointer;
