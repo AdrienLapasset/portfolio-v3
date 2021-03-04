@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Background.scss';
 
 function Background() {
+
+	useEffect(() => {
+		const background = document.getElementById("background")
+		const paths = background.children
+
+		for (var i = 0; i < paths.length; i++) {
+			paths[i].addEventListener("mouseenter", function (event) {
+				event.target.classList.add("revert");
+				setTimeout(function () {
+					event.target.classList.remove("revert");
+				}, 1000);
+			})
+		}
+	}, [])
+
+
 	return (
 		<svg
 			width="504px"
@@ -20,6 +36,7 @@ function Background() {
 				fill="none"
 				fillRule="evenodd"
 				className="animationDelay"
+				id="background"
 			>
 				{/* CODE BLOCK */}
 				<path
@@ -78,8 +95,7 @@ function Background() {
 					d="M230.3575,543.046 L405.1555,543.046"
 					id="Stroke-71"
 					strokeLinejoin="round"
-				/>{' '}
-				*/}
+				/>
 				{/* SCREEN BLOCK */}
 				<path
 					d="M227.062,487.8217 L227.062,578.6587 C227.062,589.3767 218.294,598.1447 207.576,598.1447 L21.486,598.1447 C10.769,598.1447 2,589.3767 2,578.6587 L2,318.1677 C2,307.4507 10.769,298.6817 21.486,298.6817 L160.591,298.6817"

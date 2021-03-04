@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import LogoSlider from './LogoSlider/LogoSlider';
-import './Footer.scss';
+import './LogoSliderContainer.scss';
 
-class Footer extends Component {
+class LogoSliderContainer extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -86,15 +86,11 @@ class Footer extends Component {
 		return (
 			<div
 				onClick={this.toggleFooter}
-				className={`Footer 
-				${this.state.isShowed ? 'Footer--show' : ''}
-				${!this.props.isTouch ? 'Footer--transition' : ''}`}
-				style={{ transform: `translateY(${this.state.positionY}px)` }}
-			>
+				className="Footer">
 				<h2 className="Footer__title">Ils m'ont fait confiance</h2>
 				<LogoSlider
 					footerPos={this.state.positionY}
-					isShowed={this.state.isShowed}
+					isShowed={true}
 					isTouched={this.handleLogoTouched}
 				/>
 			</div>
@@ -102,4 +98,4 @@ class Footer extends Component {
 	}
 }
 
-export default Footer;
+export default LogoSliderContainer;

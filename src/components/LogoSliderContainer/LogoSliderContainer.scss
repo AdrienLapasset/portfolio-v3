@@ -1,22 +1,15 @@
-@import '../../styles/colors';
-@import '../../styles/animations';
-@import '../../styles/media';
+@import "../../styles/colors";
+@import "../../styles/animations";
+@import "../../styles/media";
 
 .Footer {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
 	cursor: pointer;
 	box-shadow: 0px -10px 10px 0px white;
 
 	@include md {
-		animation: footer .4s .8s forwards cubic-bezier(.2, 0, 0, 1);
+		animation: footer 0.4s 0.8s forwards cubic-bezier(0.2, 0, 0, 1);
 		bottom: -150px;
 		box-shadow: none;
-		&:hover:not(.Footer--show) {
-			transform: translateY(-20px);
-		}
 	}
 
 	&--show {
@@ -31,7 +24,7 @@
 	}
 
 	&--transition {
-		transition: transform .2s cubic-bezier(.2, 0, 0, 1);
+		transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1);
 	}
 
 	&__title {
@@ -44,7 +37,7 @@
 		display: none;
 
 		@include md {
-			transition: opacity .2s;
+			transition: opacity 0.2s;
 			display: block;
 			background-color: white;
 			box-shadow: 0px -15px 15px 10px white;

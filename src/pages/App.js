@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import Observer from 'fontfaceobserver';
+
 import Header from '../components/Header/Header';
 import Home from '../components/Home/Home';
-import Footer from '../components/Footer/Footer';
-import Observer from 'fontfaceobserver';
+import LogoSliderContainer from '../components/LogoSliderContainer';
+import Projects from '../components/Projects';
+import Footer from '../components/Footer';
 
 class App extends Component {
 	constructor(props) {
@@ -96,7 +99,7 @@ class App extends Component {
 					isFontLoaded={this.state.isFontLoaded}
 				/>
 				{this.state.isFontLoaded ? this.state.isSwipe || !this.state.isMobile ? (
-					<Footer
+					<LogoSliderContainer
 						isMobile={this.state.isMobile}
 						isSwipe={this.state.isSwipe}
 						isTouch={this.state.isTouch}
@@ -104,6 +107,8 @@ class App extends Component {
 						isShowed={this.handleFooterShowed}
 					/>
 				) : null : null}
+				<Projects />
+				<Footer />
 			</div>
 		);
 	}
