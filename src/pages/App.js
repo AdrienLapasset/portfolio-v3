@@ -5,6 +5,7 @@ import Header from '../components/Header/Header';
 import Home from '../components/Home/Home';
 import LogoSliderContainer from '../components/LogoSliderContainer';
 import Projects from '../components/Projects';
+import Footer from '../components/Footer';
 
 class App extends Component {
 	constructor(props) {
@@ -107,6 +108,7 @@ class App extends Component {
 					/>
 				) : null : null}
 				<Projects />
+				<Footer />
 			</div>
 		);
 	}

@@ -1,8 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from "gatsby"
 import breakpoint from 'styled-components-breakpoint';
-import styled, { ThemeProvider } from 'styled-components'
-import theme from '../../styles/theme'
+import styled from 'styled-components'
 
 import Project from './Project';
 
@@ -39,13 +38,10 @@ const Projects = () => {
   })
 
   return (
-    <ThemeProvider theme={theme}>
-      <StyledSection>
-        <Styledh2>Mes plus beaux projets&nbsp;:</Styledh2>
-        {projectsRender}
-      </StyledSection>
-    </ThemeProvider>
-
+    <StyledSection>
+      <Styledh2>Mes plus beaux projets&nbsp;:</Styledh2>
+      {projectsRender}
+    </StyledSection>
   );
 }
 
