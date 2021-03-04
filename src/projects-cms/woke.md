@@ -11,4 +11,4 @@ siteUrl: https://www.solen.co/
 repoUrl: https://github.com/AdrienLapasset/woke-gatsby-wordpress
 id: 2
 ---
-J'ai transformé leur ancien Wordpress en headless CMS avec Gatsby en front.<br>Le design a été réalisé par <a href=""> Laure Artiaque</a> 
+Transformation d'un ancien Wordpress en headless CMS avec Gatsby en front.<br>Le design a été réalisé par <a href="https://alor.design/" target="_blank" rel="noopener noreferrer"> Laure Artiaque</a>. 

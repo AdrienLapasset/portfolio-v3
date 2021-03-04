@@ -40,7 +40,7 @@ const Projects = () => {
 
   return (
     <StyledSection>
-      <Styledh2>Mes plus beaux projets&nbsp;:</Styledh2>
+      <Styledh2>Projets sélectionnés&nbsp;:</Styledh2>
       {projectsRender}
     </StyledSection>
   );
