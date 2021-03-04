@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import LogoSlider from './LogoSlider/LogoSlider';
-import './Footer.scss';
+import './LogoSliderContainer.scss';
 
-class Footer extends Component {
+class LogoSliderContainer extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -98,4 +98,4 @@ class Footer extends Component {
 	}
 }
 
-export default Footer;
+export default LogoSliderContainer;

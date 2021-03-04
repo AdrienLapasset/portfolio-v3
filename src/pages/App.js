@@ -3,7 +3,7 @@ import Observer from 'fontfaceobserver';
 
 import Header from '../components/Header/Header';
 import Home from '../components/Home/Home';
-import Footer from '../components/Footer/Footer';
+import LogoSliderContainer from '../components/LogoSliderContainer';
 import Projects from '../components/Projects';
 
 class App extends Component {
@@ -98,7 +98,7 @@ class App extends Component {
 					isFontLoaded={this.state.isFontLoaded}
 				/>
 				{this.state.isFontLoaded ? this.state.isSwipe || !this.state.isMobile ? (
-					<Footer
+					<LogoSliderContainer
 						isMobile={this.state.isMobile}
 						isSwipe={this.state.isSwipe}
 						isTouch={this.state.isTouch}
