@@ -7,13 +7,15 @@ import Illustration from './Illustration';
 
 const FeaturedImg = ({ project }) => {
   return (
-    <StyledContainer>
-      <Illustration />
-      <StyledImageContainer preserveStackingContext fluid={project.featuredImage.childImageSharp.fluid}>
-        <StyledDarken />
-        <StyledTitle>{project.title}</StyledTitle>
-      </StyledImageContainer>
-    </StyledContainer>
+    <SyledHoverContainer>
+      <StyledContainer>
+        <Illustration />
+        <StyledImageContainer preserveStackingContext fluid={project.featuredImage.childImageSharp.fluid}>
+          <StyledDarken />
+          <StyledTitle>{project.title}</StyledTitle>
+        </StyledImageContainer>
+      </StyledContainer>
+    </SyledHoverContainer>
   );
 }
 
@@ -40,7 +42,13 @@ const StyledContainer = styled.div`
   max-height: 100%;
   transition: padding .4s ease-out, width .4s ease-out, max-height .4s ease-out;
   cursor: pointer;
-  &:hover {
+  ${breakpoint('sm')`
+    padding: 10px 10px 0 10px;
+  `}
+`
+const SyledHoverContainer = styled.div`
+  height: 300px;
+  &:hover ${StyledContainer} {
     max-height: 276px;
     width: 476px;
     padding: 4px 4px 0 4px;
@@ -55,9 +63,6 @@ const StyledContainer = styled.div`
       transform: translateY(-20px);
     }
   }
-  ${breakpoint('sm')`
-    padding: 10px 10px 0 10px;
-  `}
 `
 const StyledImageContainer = styled(BackgroundImage)`
   display: flex;

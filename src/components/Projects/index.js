@@ -15,6 +15,7 @@ const Projects = () => {
           frontmatter {
             title
             categories
+            description
             siteUrl
             repoUrl
             featuredImage {

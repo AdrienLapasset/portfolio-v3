@@ -30,6 +30,7 @@ const Project = ({ project, projectContent }) => {
         <StyledCategoryContainer>
           {categoriesRender}
         </StyledCategoryContainer>
+        <StyledDescription>{project.description}</StyledDescription>
         <StyledContent dangerouslySetInnerHTML={{ __html: projectContent }} />
         <StyledIconsContainer>
           <StyledIconContainer href={project.repoUrl} target="_blank" rel="noopener noreferrer">
@@ -63,6 +64,12 @@ const StyledInfoContainer = styled.aside`
   ${breakpoint('lg')`
     flex: 0 0 50%;
     padding-left: 20px;
+  `}
+`
+const StyledDescription = styled.p`
+  /* font-style: italic; */
+  ${breakpoint('md')`
+    font-size: 24px
   `}
 `
 const StyledContent = styled.div`
