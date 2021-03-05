@@ -8,7 +8,7 @@ categories:
   - jQuery
   - HTML
   - CSS
-siteUrl: https://wind-mile.com
+siteUrl: https://wind-mile.com/home
 repoUrl: https://github.com/AdrienLapasset/windmile
 year: 2017
 ---
