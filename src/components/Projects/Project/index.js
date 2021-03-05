@@ -75,7 +75,6 @@ const StyledDescription = styled.p`
 `
 const StyledContent = styled.div`
   a {
-    text-decoration: none;
     &:hover {
       text-decoration: underline;
     }
