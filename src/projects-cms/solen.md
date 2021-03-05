@@ -1,11 +1,14 @@
 ---
-title: Solen
-categories: 
-  - Toto
-  - Tata
+title: solen
 featuredImage: solen.jpg
-id: 1
+description: Application
+categories:
+  - HTML
+  - CSS
+  - Javascript
+  - Bootstrap
 siteUrl: https://www.solen.co/
-repoUrl: https://github.com/AdrienLapasset/woke-gatsby-wordpress
+repoUrl: https://gitlab.com/aflapasset/solen
+year: 2018
 ---
-caca
+Développement du site vitrine. Outils permettant le calcul et l'optimisation de la luminosité de biens immobiliers.

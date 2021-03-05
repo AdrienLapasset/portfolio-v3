@@ -10,7 +10,7 @@ const FeaturedImg = ({ project }) => {
     <SyledHoverContainer>
       <StyledContainer>
         <Illustration />
-        <StyledImageContainer preserveStackingContext fluid={project.featuredImage.childImageSharp.fluid}>
+        <StyledImageContainer style={{ backgroundPosition: '' }} preserveStackingContext fluid={project.featuredImage.childImageSharp.fluid}>
           <StyledDarken />
           <StyledTitle>{project.title}</StyledTitle>
         </StyledImageContainer>
@@ -30,6 +30,7 @@ const StyledDarken = styled.div`
   transition: all .2s linear;
 `
 const StyledTitle = styled.h3`
+  text-transform: capitalize;
   color: white;
   font-size: 44px;
   z-index: 1;
@@ -72,6 +73,7 @@ const StyledImageContainer = styled(BackgroundImage)`
   overflow: hidden;
   height: 100%;
   z-index: 1;
+  background-position: top;
 `
 
 export default FeaturedImg;
