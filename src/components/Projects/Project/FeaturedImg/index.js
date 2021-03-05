@@ -37,13 +37,13 @@ const StyledTitle = styled.h3`
 `
 const StyledContainer = styled.div`
   position: relative;
-  width: 464px;
-  height: 290px;
+  width: 468px;
+  height: 280px;
   max-height: 100%;
   transition: padding .4s ease-out, width .4s ease-out, max-height .4s ease-out;
   cursor: pointer;
   ${breakpoint('sm')`
-    padding: 10px 10px 0 10px;
+    padding: 8px 8px 0 8px;
   `}
 `
 const SyledHoverContainer = styled.div`

@@ -30,7 +30,7 @@ const StyledCategoryStyle = css`
   ${breakpoint('sm')`
     border-radius: 8px;
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: 11px;
   `}
 `
 

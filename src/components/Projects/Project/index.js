@@ -67,9 +67,10 @@ const StyledInfoContainer = styled.aside`
   `}
 `
 const StyledDescription = styled.p`
-  /* font-style: italic; */
+  color: ${props => props.theme.colors.grey};
+  margin-bottom: 10px;
   ${breakpoint('md')`
-    font-size: 24px
+    font-size: 20px
   `}
 `
 const StyledContent = styled.div`
@@ -81,12 +82,12 @@ const StyledContent = styled.div`
   }
   ${breakpoint('md')`
     p, a {
-      font-size: 20px
+      font-size: 18px
     }
   `}
 `
 const StyledCategoryContainer = styled.div`
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   > :not(:last-child) {
     margin-right: 7px;
     ${breakpoint('lg')`

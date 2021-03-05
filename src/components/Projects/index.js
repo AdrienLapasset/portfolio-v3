@@ -54,16 +54,16 @@ const StyledSection = styled.section`
   margin: 100px auto;
   padding: 0 15px;
   ${breakpoint('sm')`
-    max-width: 540px;
+    max-width: ${props => props.theme.breakpoints.sm}px;
   `}
   ${breakpoint('md')`
-    max-width: 720px;
+    max-width: ${props => props.theme.breakpoints.md}px;
   `}
   ${breakpoint('lg')`
-    max-width: 960px;
+    max-width: ${props => props.theme.breakpoints.lg}px;
   `}
   ${breakpoint('xl')`
-    max-width: 1140px;
+    max-width: ${props => props.theme.breakpoints.xl}px;
   `}
 `
 const Styledh2 = styled.h2`
