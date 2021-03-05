@@ -1,7 +1,7 @@
 ---
 title: windmile
 featuredImage: windmile.jpg
-description: Groupe de musique Wind Mile
+description: Groupe de musique
 categories:
   - design
   - Sketch
