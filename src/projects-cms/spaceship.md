@@ -1,7 +1,7 @@
 ---
 title: spaceships
 featuredImage: spaceship.png
-description: Création interactive
+description: Illustrations interactives
 categories:
   - HTML
   - CSS
@@ -11,5 +11,4 @@ siteUrl: https://spaceshiplh.netlify.app
 repoUrl: https://github.com/AdrienLapasset/spaceship
 year: 2016
 ---
-Une série de plans de capsules spatiales dessinées par <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/louisehumbert/">Louise Humbert</a>. 
-Concevez votre propre vaisseau spatial avec <a target="_blank" rel="noopener noreferrer" href="https://spaceshiplh.netlify.app/generator.html">ce générateur aléatoire</a>.
+Design et développement d'un site composé d'une série de plans de capsules spatiales et d'un <a target="_blank" rel="noopener noreferrer" href="https://spaceshiplh.netlify.app/generator.html">générateur de capsules</a>. Illustrations de <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/louisehumbert/">Louise Humbert</a>.

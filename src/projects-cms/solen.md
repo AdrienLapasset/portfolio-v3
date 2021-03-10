@@ -1,7 +1,7 @@
 ---
 title: solen
 featuredImage: solen.jpg
-description: Application
+description: Start-up
 categories:
   - HTML
   - CSS
@@ -11,4 +11,4 @@ siteUrl: https://www.solen.co/
 repoUrl: https://gitlab.com/aflapasset/solen
 year: 2018
 ---
-Développement du site vitrine. Outils permettant le calcul et l'optimisation de la luminosité de biens immobiliers.
+Développement front-end du site. Outil permettant le calcul et l'optimisation de la luminosité de biens immobiliers.
