@@ -50,10 +50,12 @@ class App extends Component {
 				{this.state.isFontLoaded ? <Header /> : ''}
 				<Home isFontLoaded={this.state.isFontLoaded} />
 				{this.state.isFontLoaded ? (
-					<LogoSliderContainer />
+					<>
+						<LogoSliderContainer />
+						<Projects />
+						<Footer />
+					</>
 				) : null}
-				<Projects />
-				<Footer />
 			</div>
 		);
 	}
