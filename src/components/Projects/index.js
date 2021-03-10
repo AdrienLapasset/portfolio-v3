@@ -42,7 +42,9 @@ const Projects = () => {
     <StyledSection>
       <Styledh2>Projets sélectionnés&nbsp;:</Styledh2>
       {projectsRender}
-      <StyledBtn href="https://www.malt.fr/profile/adrienlapasset" target="_blank" rel="noopener noreferrer">Plus de projets</StyledBtn>
+      <StyledBtnSecondary href="https://www.malt.fr/profile/adrienlapasset" target="_blank" rel="noopener noreferrer">Plus de projets</StyledBtnSecondary>
+      <StyledBtn className="Home__contact-btn" href="mailto:aflapasset@gmail.com" target="_blank" rel="noopener noreferrer">Me contacter</StyledBtn>
+
     </StyledSection>
   );
 }
@@ -81,6 +83,13 @@ const StyledBtn = styled.a`
 	background-color: black;
 	color: white;
 	padding: 13px 23px;
+`
+const StyledBtnSecondary = styled(StyledBtn)`
+	background-color: white;
+	color: black;
+  border: 2px solid black;
+  padding: 11px 21px;
+  margin-bottom: 20px;
 `
 
 export default Projects

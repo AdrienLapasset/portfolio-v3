@@ -48,9 +48,7 @@ class Home extends Component {
 							responsive, le design minimaliste et les transitions en douceur.
 						</p>
 						<div className="Home__contact">
-							<a className="Home__contact-btn" href="mailto:aflapasset@gmail.com" target="_blank" rel="noopener noreferrer">
-								Me contacter
-							</a>
+							<a className="Home__contact-btn" href="mailto:aflapasset@gmail.com" target="_blank" rel="noopener noreferrer">Me contacter</a>
 						</div>
 					</StyledText>
 				) : null}
