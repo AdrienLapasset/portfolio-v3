@@ -27,6 +27,7 @@ const StyledCategoryStyle = css`
   padding: 3px 7px;
   text-transform: uppercase;
   text-decoration: none;
+  margin-bottom: 7px;
   ${breakpoint('sm')`
     border-radius: 8px;
     padding: 5px 10px;

@@ -38,17 +38,20 @@ const StyledTitle = styled.h3`
 `
 const StyledContainer = styled.div`
   position: relative;
-  width: 468px;
   height: 280px;
+  width: 100%;
   max-height: 100%;
   transition: padding .4s ease-out, width .4s ease-out, max-height .4s ease-out;
   cursor: pointer;
+  margin: auto;
   ${breakpoint('sm')`
+    width: 468px;
     padding: 8px 8px 0 8px;
   `}
 `
 const SyledHoverContainer = styled.div`
   height: 300px;
+  width: 100%;
   &:hover ${StyledContainer} {
     max-height: 276px;
     width: 476px;

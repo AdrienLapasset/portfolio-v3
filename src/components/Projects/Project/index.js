@@ -86,7 +86,9 @@ const StyledContent = styled.div`
   `}
 `
 const StyledCategoryContainer = styled.div`
-  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 13px;
   > :not(:last-child) {
     margin-right: 7px;
     ${breakpoint('lg')`
@@ -98,7 +100,9 @@ const StyledLink = styled.a`
   display: flex;
   justify-content: center;
   text-decoration: none;
-  margin-bottom: 30px;
+  ${breakpoint('sm')`
+    margin-bottom: 10px;
+  `}
   ${breakpoint('lg')`
     flex: 0 0 50%;
     padding-right: 20px;
