@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import './Home.scss';
 import Illustration from '../Illustration/Illustration';
 import SwipeIcon from './SwipeIcon/SwipeIcon';
-import CopyIcon from '../../assets/icons/copyIcon';
 
 class Home extends Component {
 	constructor(props) {

@@ -42,7 +42,7 @@ const Projects = () => {
     <StyledSection>
       <Styledh2>Projets sélectionnés&nbsp;:</Styledh2>
       {projectsRender}
-      <StyledBtn href="https://www.malt.fr/profile/adrienlapasset" target="_blank" rel="noopener noreferrer">Et plus encore...</StyledBtn>
+      <StyledBtn href="https://www.malt.fr/profile/adrienlapasset" target="_blank" rel="noopener noreferrer">Plus de projets</StyledBtn>
     </StyledSection>
   );
 }

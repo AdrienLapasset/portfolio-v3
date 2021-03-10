@@ -52,21 +52,23 @@ const StyledContainer = styled.div`
 const SyledHoverContainer = styled.div`
   height: 300px;
   width: 100%;
-  &:hover ${StyledContainer} {
-    max-height: 276px;
-    width: 476px;
-    padding: 4px 4px 0 4px;
-    ${StyledDarken} {
-      opacity: 0;
+  ${breakpoint('lg')`
+    &:hover ${StyledContainer} {
+      max-height: 276px;
+      width: 476px;
+      padding: 4px 4px 0 4px;
+      ${StyledDarken} {
+        opacity: 0;
+      }
+      svg {
+        stroke-dasharray: 1490;		
+      }
+      ${StyledTitle} {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
     }
-     svg {
-      stroke-dasharray: 1490;		
-    }
-    ${StyledTitle} {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-  }
+  `}  
 `
 const StyledImageContainer = styled(BackgroundImage)`
   display: flex;
