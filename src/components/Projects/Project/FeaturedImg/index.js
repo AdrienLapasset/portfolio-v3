@@ -30,6 +30,7 @@ const StyledDarken = styled.div`
   transition: all .2s linear;
 `
 const StyledTitle = styled.h3`
+  text-align: center;
   text-transform: capitalize;
   color: white;
   font-size: 44px;
