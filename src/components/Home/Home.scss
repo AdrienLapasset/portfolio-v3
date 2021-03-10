@@ -77,38 +77,21 @@
 		}
 	}
 
-	&__email {
-		margin-top: 10px;
+	&__contact {
 		text-decoration: none;
+		margin-top: 30px;
 		display: flex;
-		align-items: center;
-
-		a {
-			cursor: pointer;
+		justify-content: center;
+		@include lg {
+			justify-content: flex-start;
 		}
-
-		&__copyBtn {
-			cursor: pointer;
-			background-color: black;
-			margin-left: 15px;
-			border: none;
-			outline: none;
-			border-radius: 3px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 30px;
-			height: 30px;
-		}
-
-		&__feedback {
-			opacity: 0;
-			font-size: 16px;
-			margin-left: 10px;
-			animation: feedbackIcon 2s;
-			animation-iteration-count: 2;
-			animation-direction: alternate;
-		}
+	}
+	&__contact-btn {
+		border-radius: 100px;
+		text-decoration: none;
+		background-color: black;
+		color: white;
+		padding: 7px 20px;
 	}
 }
 

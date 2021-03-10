@@ -48,15 +48,10 @@ class Home extends Component {
 							Je suis un développeur créatif (et occasionnellement designer) qui aime les sites
 							responsive, le design minimaliste et les transitions en douceur.
 						</p>
-						<p className="Home__text__contact">Pour me contacter c’est par ici :</p>
-						<div className="Home__email">
-							<a href="mailto:aflapasset@gmail.com" target="_blank" rel="noopener noreferrer">
-								aflapasset@gmail.com
+						<div className="Home__contact">
+							<a className="Home__contact-btn" href="mailto:aflapasset@gmail.com" target="_blank" rel="noopener noreferrer">
+								Me contacter
 							</a>
-							<button className="Home__email__copyBtn" onClick={this.onClickEmail}>
-								<CopyIcon />
-							</button>
-							{this.state.isEmailCopied ? <span className="Home__email__feedback">Copiée !</span> : null}
 						</div>
 					</StyledText>
 				) : null}
@@ -67,7 +62,6 @@ class Home extends Component {
 }
 
 const StyledText = styled.section`
-
 ${breakpoint('sm')`
     max-width: ${props => props.theme.breakpoints.sm}px;
   `}
