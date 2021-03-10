@@ -1,6 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: "Adrien Lapasset",
+    description: `Je suis un développeur créatif (et occasionnellement designer) qui aime les sites
+    responsive, le design minimaliste et les transitions en douceur.`,
+    url: `https://alapasset.dev`,
+    author: `Adrien Lapasset`,
   },
   plugins: [
     `gatsby-plugin-sass`,
