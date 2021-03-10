@@ -42,6 +42,7 @@ const Projects = () => {
     <StyledSection>
       <Styledh2>Projets sélectionnés&nbsp;:</Styledh2>
       {projectsRender}
+      <StyledBtn href="https://www.malt.fr/profile/adrienlapasset" target="_blank" rel="noopener noreferrer">Et plus encore...</StyledBtn>
     </StyledSection>
   );
 }
@@ -73,6 +74,13 @@ const Styledh2 = styled.h2`
   ${breakpoint('sm')`
     font-size: 55px;
   `}
+`
+const StyledBtn = styled.a`
+  border-radius: 100px;
+	text-decoration: none;
+	background-color: black;
+	color: white;
+	padding: 13px 23px;
 `
 
 export default Projects
