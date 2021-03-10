@@ -7,6 +7,7 @@ module.exports = {
     author: `Adrien Lapasset`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
