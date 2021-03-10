@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import breakpoint from 'styled-components-breakpoint';
+import styled from 'styled-components'
+
 import './Home.scss';
 import Illustration from '../Illustration/Illustration';
 import SwipeIcon from './SwipeIcon/SwipeIcon';
-import CopyIcon from '../../assets/icons/copyIcon';
 
 class Home extends Component {
 	constructor(props) {
@@ -13,17 +15,6 @@ class Home extends Component {
 		};
 
 		this.onClickEmail = this.onClickEmail.bind(this);
-	}
-
-	componentDidUpdate(prevProps) {
-		if (prevProps !== this.props) {
-			if (!this.props.isSwipe && this.props.isTouch) {
-				let newOpacity = 1 - this.props.diffY / 100;
-				this.setState({ opacity: newOpacity });
-			} else {
-				this.setState({ opacity: 1 });
-			}
-		}
 	}
 
 	onClickEmail() {
@@ -48,30 +39,40 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="Home">
-				{!this.props.isSwipe ? <Illustration opacity={this.state.opacity} /> : ''}
-				{this.props.isFontLoaded ? !this.props.isMobile || this.props.isSwipe ? (
-					<div className="Home__text" style={{ opacity: this.state.opacity }}>
+				<Illustration opacity={this.state.opacity} />
+				{this.props.isFontLoaded ? (
+					<StyledText className="Home__text" style={{ opacity: this.state.opacity }}>
 						<p className="Home__text__hello">Bonjour,</p>
 						<p>
 							Je suis un développeur créatif (et occasionnellement designer) qui aime les sites
 							responsive, le design minimaliste et les transitions en douceur.
 						</p>
-						<p className="Home__text__contact">Pour me contacter c’est par ici :</p>
-						<div className="Home__email">
-							<a href="mailto:aflapasset@gmail.com" target="_blank" rel="noopener noreferrer">
-								aflapasset@gmail.com
+						<div className="Home__contact">
+							<a className="Home__contact-btn" href="mailto:aflapasset@gmail.com" target="_blank" rel="noopener noreferrer">
+								Me contacter
 							</a>
-							<button className="Home__email__copyBtn" onClick={this.onClickEmail}>
-								<CopyIcon />
-							</button>
-							{this.state.isEmailCopied ? <span className="Home__email__feedback">Copiée !</span> : null}
 						</div>
-					</div>
-				) : null : null}
-				{this.props.isMobile && !this.props.isSwipe ? <SwipeIcon /> : null}
+					</StyledText>
+				) : null}
+				{this.props.isMobile ? <SwipeIcon /> : null}
 			</div>
 		);
 	}
 }
+
+const StyledText = styled.section`
+${breakpoint('sm')`
+    max-width: ${props => props.theme.breakpoints.sm}px;
+  `}
+  ${breakpoint('md')`
+    max-width: ${props => props.theme.breakpoints.md}px;
+  `}
+  ${breakpoint('lg')`
+    max-width: ${props => props.theme.breakpoints.lg}px;
+  `}
+  ${breakpoint('xl')`
+    max-width: ${props => props.theme.breakpoints.xl}px;
+  `}
+`
 
 export default Home;
