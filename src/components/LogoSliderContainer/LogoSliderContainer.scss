@@ -8,19 +8,7 @@
 
 	@include md {
 		animation: footer 0.4s 0.8s forwards cubic-bezier(0.2, 0, 0, 1);
-		bottom: -150px;
 		box-shadow: none;
-	}
-
-	&--show {
-		transform: translateY(-100px);
-
-		.Footer__title {
-			opacity: 0;
-			@include md {
-				opacity: 1;
-			}
-		}
 	}
 
 	&--transition {
@@ -34,25 +22,12 @@
 		text-transform: uppercase;
 		font-size: 14px;
 		padding-bottom: 10px;
-		display: none;
 
 		@include md {
 			transition: opacity 0.2s;
 			display: block;
 			background-color: white;
 			box-shadow: 0px -15px 15px 10px white;
-		}
-
-		&--mobile {
-			text-transform: none;
-			display: block;
-			position: absolute;
-			bottom: 62px;
-			color: white;
-
-			@include md {
-				display: none;
-			}
 		}
 	}
 }
