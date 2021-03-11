@@ -13,13 +13,10 @@ class Header extends Component {
 		this.onClickLogo = this.onClickLogo.bind(this);
 	}
 
-	onClickLogo() {
-		window.location.reload();
-	}
 	render() {
 		return (
 			<header className="header">
-				<div className="header__logo" onClick={this.onClickLogo}>
+				<div className="header__logo" >
 					<LogoAdrienLapasset />
 					Adrien Lapasset
 				</div>

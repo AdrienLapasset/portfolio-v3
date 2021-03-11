@@ -5,8 +5,8 @@ import breakpoint from 'styled-components-breakpoint';
 const Illustration = ({ className }) => {
   return (
     <StyledSvg className={className} width="484px" height="284px" viewBox="0 0 484 284" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
-        <g id="2019" transform="translate(-782.000000, -1186.000000)" stroke="#000000" stroke-width="4">
+      <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round">
+        <g id="2019" transform="translate(-782.000000, -1186.000000)" stroke="#000000" strokeWidth="4">
           <rect id="Rectangle" transform="translate(1024.000000, 1328.000000) rotate(-180.000000) translate(-1024.000000, -1328.000000) " x="784" y="1188" width="480" height="280" rx="20"></rect>
         </g>
       </g>

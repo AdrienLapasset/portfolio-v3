@@ -12,7 +12,7 @@ const Project = ({ project, projectContent }) => {
   const categories = project.categories
   const categoriesRender = categories.map((category, index) => {
     return (
-      <Category category={category} />
+      <Category key={index} category={category} />
     )
   })
 
