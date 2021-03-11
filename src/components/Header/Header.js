@@ -8,10 +8,6 @@ import GitlabIcon from '../../assets/icons/gitlab.js';
 import SpotifyIcon from '../../assets/icons/spotify.js';
 
 class Header extends Component {
-	constructor(props) {
-		super(props);
-		this.onClickLogo = this.onClickLogo.bind(this);
-	}
 
 	render() {
 		return (

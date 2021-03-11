@@ -18,6 +18,7 @@
 	}
 
 	&__logo {
+		opacity: 0;
 		display: flex;
 		align-items: center;
 		animation: fadefromTop 0.4s forwards;
@@ -31,6 +32,7 @@
 	&__links {
 		display: flex;
 		& > a {
+			opacity: 0;
 			margin-left: 20px;
 			transition: fill 0.2s, stroke 0.2s;
 			animation: fadefromTop 0.4s forwards;
