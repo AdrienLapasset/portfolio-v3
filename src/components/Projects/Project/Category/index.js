@@ -9,6 +9,7 @@ const Category = ({ category, className }) => {
     { name: 'gatsby', url: 'https://www.gatsbyjs.com/' },
     { name: 'wordpress', url: 'https://fr.wordpress.org/' },
     { name: 'jamstack', url: 'https://jamstack.org/' },
+    { name: 'styled components', url: 'https://styled-components.com/' },
   ]
 
   const thisCategory = categories.find(item => item.name === category)

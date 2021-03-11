@@ -7,6 +7,7 @@ categories:
   - gatsby
   - wordpress
   - jamStack
+  - styled components
 siteUrl: https://woke.fr/
 repoUrl: https://github.com/AdrienLapasset/woke-gatsby-wordpress
 year: 2021
