@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <StyleContainer>
-      Adrien Lapasset - Copyrights © {currentYear}
+      © {currentYear} Adrien Lapasset
     </StyleContainer>
   );
 }
