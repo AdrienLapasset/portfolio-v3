@@ -20,7 +20,7 @@ const Projects = () => {
             repoUrl
             featuredImage {
               childImageSharp {
-                fluid(quality: 90) {
+                fluid(quality: 70, maxWidth: 468, maxHeight: 280, cropFocus: NORTH) {
                   ...GatsbyImageSharpFluid
                 }
               }

@@ -58,17 +58,19 @@ const SyledHoverContainer = styled.div`
     max-height: 276px;
     width: 476px;
     padding: 4px 4px 0 4px;
-    ${StyledDarken} {
-      opacity: 0;
-    }
     svg {
       stroke-dasharray: 1490;		
     }
+    `}  
+
+    ${StyledDarken} {
+      opacity: 0;
+    }
+    
     ${StyledTitle} {
       opacity: 0;
       transform: translateY(-20px);
     }
-  `}  
   }
 `
 const StyledImageContainer = styled(BackgroundImage)`
