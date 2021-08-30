@@ -33,9 +33,11 @@ const Project = ({ project, projectContent }) => {
         <StyledDescription>{project.description}</StyledDescription>
         <StyledContent dangerouslySetInnerHTML={{ __html: projectContent }} />
         <StyledIconsContainer>
-          <StyledIconContainer href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-            <GithubIcon />
-          </StyledIconContainer>
+          {project.repoUrl ?
+            <StyledIconContainer href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+              <GithubIcon />
+            </StyledIconContainer>
+            : null}
           <StyledIconContainer href={project.siteUrl} target="_blank" rel="noopener noreferrer" >
             <ArrowIcon />
           </StyledIconContainer>

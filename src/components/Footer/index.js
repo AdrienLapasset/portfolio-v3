@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <StyleContainer>
-      Made with <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener noreferrer">Gatsby</a> and <StyledHeart>❤️</StyledHeart><StyledBr /><StyledAuthor>© {currentYear} Adrien Lapasset</StyledAuthor>
+      Made with <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener noreferrer">Gatsby</a> and <StyledHeart role="img" aria-label="love">❤️</StyledHeart><StyledBr /><StyledAuthor>© {currentYear} Adrien Lapasset</StyledAuthor>
     </StyleContainer>
   );
 }
