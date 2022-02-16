@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components'
-import breakpoint from 'styled-components-breakpoint';
 
 const Category = ({ category, className }) => {
 
@@ -29,11 +28,6 @@ const StyledCategoryStyle = css`
   text-transform: uppercase;
   text-decoration: none;
   margin-bottom: 7px;
-  ${breakpoint('sm')`
-    border-radius: 8px;
-    padding: 5px 10px;
-    font-size: 11px;
-  `}
 `
 
 const StyledCategory = styled.span`

@@ -9,4 +9,4 @@ categories:
 siteUrl: https://plumelabs.com/
 year: 2021.1
 ---
-Développement de plusieurs pages sur ce site vitrine utilisant Gastby.  
+Développement des pages "Solutions" sur ce site vitrine utilisant Gastby.  

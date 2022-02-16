@@ -93,9 +93,6 @@ const StyledCategoryContainer = styled.div`
   margin-bottom: 13px;
   > :not(:last-child) {
     margin-right: 7px;
-    ${breakpoint('lg')`
-      margin-right: 10px;
-    `}
   }
 `
 const StyledLink = styled.a`

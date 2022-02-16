@@ -2,17 +2,6 @@ import React from 'react';
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint';
 
-const Footer = () => {
-
-  const currentYear = new Date().getFullYear()
-
-  return (
-    <StyleContainer>
-      Made with <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener noreferrer">Gatsby</a> and <StyledHeart role="img" aria-label="love">❤️</StyledHeart><StyledBr /><StyledAuthor>© {currentYear} Adrien Lapasset</StyledAuthor>
-    </StyleContainer>
-  );
-}
-
 const StyleContainer = styled.section`
   color: ${props => props.theme.colors.grey};
   text-align: center;
@@ -38,5 +27,16 @@ const StyledAuthor = styled.span`
     margin-left: 10px;
   `}
 `
+
+const Footer = () => {
+
+  const currentYear = new Date().getFullYear()
+
+  return (
+    <StyleContainer>
+      Made with <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener noreferrer">Gatsby</a> and <StyledHeart role="img" aria-label="love">❤️</StyledHeart><StyledBr /><StyledAuthor>© {currentYear} Adrien Lapasset</StyledAuthor>
+    </StyleContainer>
+  );
+}
 
 export default Footer;
