@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: `src/assets/imgs/favicon.png`
+        icon: `src/assets/imgs/favicon.png`,
       },
     },
     {
@@ -30,15 +30,16 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-8THJJHX2Y5" // Google Analytics / GA
+          "G-8THJJHX2Y5", // Google Analytics / GA
         ],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
           anonymize_ip: true,
-          cookie_expires: 0
+          cookie_expires: 0,
         },
       },
     },
-  ]
+    `gatsby-plugin-dark-mode`,
+  ],
 };
