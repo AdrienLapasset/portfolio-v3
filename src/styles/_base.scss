@@ -1,28 +1,32 @@
 @font-face {
-	font-family: "Regular-Semibold";
-	src: url("../assets/fonts/Regular-Semibold.ttf");
+  font-family: "Regular-Semibold";
+  src: url("../assets/fonts/Regular-Semibold.ttf");
 }
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-	font-family: "Regular-Semibold";
+  font-family: "Regular-Semibold";
+  &.dark {
+    background-color: black;
+    color: white;
+  }
 }
 
 p,
 a {
-	font-size: 18px;
-	font-family: "Regular-Semibold";
+  font-size: 18px;
+  font-family: "Regular-Semibold";
 
-	@include md {
-		font-size: 24px;
-	}
+  @include md {
+    font-size: 24px;
+  }
 }
 
 a {
-	color: black;
+  color: black;
 }
