@@ -1,6 +1,6 @@
 const theme = {
   colors: {
-    grey: '#b3b3b3',
+    grey: "#a0a0a0",
   },
   breakpoints: {
     xs: 0,
@@ -9,6 +9,6 @@ const theme = {
     lg: 992,
     xl: 1200,
   },
-}
+};
 
-export default theme
+export default theme;

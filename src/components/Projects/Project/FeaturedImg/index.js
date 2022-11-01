@@ -1,23 +1,27 @@
-import React from 'react';
-import styled from 'styled-components'
-import BackgroundImage from 'gatsby-background-image'
-import breakpoint from 'styled-components-breakpoint';
+import React from "react";
+import styled from "styled-components";
+import BackgroundImage from "gatsby-background-image";
+import breakpoint from "styled-components-breakpoint";
 
-import Illustration from './Illustration';
+import Illustration from "./Illustration";
 
 const FeaturedImg = ({ project }) => {
   return (
     <SyledHoverContainer>
       <StyledContainer>
         <Illustration />
-        <StyledImageContainer style={{ backgroundPosition: '' }} preserveStackingContext fluid={project.featuredImage.childImageSharp.fluid}>
+        <StyledImageContainer
+          style={{ backgroundPosition: "" }}
+          preserveStackingContext
+          fluid={project.featuredImage.childImageSharp.fluid}
+        >
           <StyledDarken />
           <StyledTitle>{project.title}</StyledTitle>
         </StyledImageContainer>
       </StyledContainer>
     </SyledHoverContainer>
   );
-}
+};
 
 const StyledDarken = styled.div`
   display: block;
@@ -27,52 +31,53 @@ const StyledDarken = styled.div`
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.5);
-  transition: all .2s linear;
-`
+  transition: all 0.2s linear;
+`;
 const StyledTitle = styled.h3`
   text-align: center;
   text-transform: capitalize;
   color: white;
-  font-size: 44px;
+  font-size: 35px;
   z-index: 1;
-  transition: opacity .4s ease-out, transform .4s ease-out;
-`
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+`;
 const StyledContainer = styled.div`
   position: relative;
   height: 280px;
   width: 100%;
   max-height: 100%;
-  transition: padding .4s ease-out, width .4s ease-out, max-height .4s ease-out;
+  transition: padding 0.4s ease-out, width 0.4s ease-out,
+    max-height 0.4s ease-out;
   cursor: pointer;
   margin: auto;
-  ${breakpoint('sm')`
+  ${breakpoint("sm")`
     width: 468px;
     padding: 8px 8px 0 8px;
   `}
-`
+`;
 const SyledHoverContainer = styled.div`
   height: 300px;
   width: 100%;
   &:hover ${StyledContainer} {
-    ${breakpoint('lg')`
+    ${breakpoint("lg")`
     max-height: 276px;
     width: 476px;
     padding: 4px 4px 0 4px;
     svg {
       stroke-dasharray: 1490;		
     }
-    `}  
+    `}
 
     ${StyledDarken} {
       opacity: 0;
     }
-    
+
     ${StyledTitle} {
       opacity: 0;
       transform: translateY(-20px);
     }
   }
-`
+`;
 const StyledImageContainer = styled(BackgroundImage)`
   display: flex;
   justify-content: center;
@@ -82,6 +87,6 @@ const StyledImageContainer = styled(BackgroundImage)`
   height: 100%;
   z-index: 1;
   background-position: top;
-`
+`;
 
 export default FeaturedImg;
