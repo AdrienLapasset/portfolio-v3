@@ -23,7 +23,6 @@ class Home extends Component {
             className="Home__text"
             style={{ opacity: this.state.opacity }}
           >
-            {/* <p className="Home__text__hello">Bonjour,</p> */}
             <p>Développeur et designer web indépendant.</p>
             <div className="Home__contact">
               <a
@@ -56,6 +55,12 @@ const StyledText = styled.section`
   ${breakpoint("xl")`
     max-width: ${(props) => props.theme.breakpoints.xl}px;
   `}
+  p {
+    text-align: center;
+    ${breakpoint("lg")`
+    text-align: left;
+  `}
+  }
 `;
 
 export default Home;

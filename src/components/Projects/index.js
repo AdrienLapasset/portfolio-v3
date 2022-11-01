@@ -50,21 +50,23 @@ const Projects = () => {
     <StyledSection>
       <Styledh2>Projets sélectionnés&nbsp;:</Styledh2>
       {projectsRender}
-      <StyledBtnSecondary
-        href="https://www.malt.fr/profile/adrienlapasset"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Plus de projets
-      </StyledBtnSecondary>
-      <StyledBtn
-        className="Home__contact-btn"
-        href="mailto:aflapasset@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Me contacter
-      </StyledBtn>
+      <StyledBtnContainer>
+        <StyledBtnSecondary
+          href="https://www.malt.fr/profile/adrienlapasset"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Plus de projets
+        </StyledBtnSecondary>
+        <StyledBtn
+          className="Home__contact-btn"
+          href="mailto:aflapasset@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Me contacter
+        </StyledBtn>
+      </StyledBtnContainer>
     </StyledSection>
   );
 };
@@ -97,6 +99,16 @@ const Styledh2 = styled.h2`
     font-size: 45px;
   `}
 `;
+
+const StyledBtnContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  ${breakpoint("sm")`
+    flex-direction: row;
+  `}
+`;
 const StyledBtn = styled.a`
   border-radius: 100px;
   text-decoration: none;
@@ -111,6 +123,10 @@ const StyledBtnSecondary = styled(StyledBtn)`
   padding: 11px 21px;
   margin-bottom: 20px;
   font-size: 20px;
+  ${breakpoint("sm")`
+    margin-bottom: 0px;
+    margin-right: 20px;
+  `}
 `;
 
 export default Projects;
