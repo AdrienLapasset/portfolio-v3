@@ -92,11 +92,11 @@ const StyledSection = styled.section`
   `}
 `;
 const Styledh2 = styled.h2`
-  font-size: 35px;
+  font-size: 30px;
   margin-bottom: 80px;
   text-align: center;
   ${breakpoint("sm")`
-    font-size: 45px;
+    font-size: 40px;
   `}
 `;
 

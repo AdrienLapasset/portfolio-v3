@@ -1,6 +1,7 @@
 const theme = {
   colors: {
     grey: "#a0a0a0",
+    greyLight: "#eee",
   },
   breakpoints: {
     xs: 0,
