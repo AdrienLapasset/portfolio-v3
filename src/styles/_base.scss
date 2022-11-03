@@ -1,28 +1,114 @@
 @font-face {
-	font-family: "Regular-Semibold";
-	src: url("../assets/fonts/Regular-Semibold.ttf");
+  font-family: "Regular-Semibold";
+  src: url("../assets/fonts/Regular-Semibold.ttf");
 }
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-	font-family: "Regular-Semibold";
+  transition: all 0.4s;
+  font-family: "Regular-Semibold";
+  .illustration svg,
+  .header svg {
+    fill: black;
+    stroke: black;
+    .oneZeroBlock {
+      fill: black;
+    }
+    .rectangleStrips {
+      stroke: white;
+    }
+    .cube {
+      fill: black;
+    }
+    .adrien {
+      stroke: black;
+    }
+    .laptop {
+      fill: black;
+    }
+    .right-leg {
+      fill: white;
+    }
+    .head {
+      fill: white;
+    }
+    .Hair {
+      fill: black;
+    }
+  }
+  .projectBorder {
+    stroke: black;
+  }
+  &.dark {
+    background-color: black;
+    color: white;
+    .illustration svg,
+    .header svg {
+      fill: white;
+      stroke: white;
+      .oneZeroBlock {
+        fill: white;
+      }
+      .rectangleStrips {
+        stroke: black;
+      }
+      .cube {
+        fill: white;
+      }
+      .adrien {
+        stroke: white;
+      }
+      .laptop {
+        fill: white;
+      }
+      .right-leg {
+        fill: black;
+      }
+      .head {
+        fill: black;
+      }
+    }
+    .Home__contact-btn,
+    .sc-fFubgz {
+      color: black;
+      background-color: white;
+      fill: black;
+      stroke: black;
+    }
+    .sc-jSgupP,
+    .sc-gKsewC {
+      border-color: white;
+      color: white;
+    }
+    .gBMTqX {
+      background-color: black;
+      color: white;
+      border-color: white;
+    }
+    .projectBorder {
+      stroke: white;
+    }
+    a {
+      color: white;
+    }
+  }
 }
 
 p,
 a {
-	font-size: 18px;
-	font-family: "Regular-Semibold";
+  font-size: 18px;
+  font-family: "Regular-Semibold";
 
-	@include md {
-		font-size: 24px;
-	}
+  @include md {
+    font-size: 28px;
+  }
 }
 
 a {
-	color: black;
+  color: black;
 }

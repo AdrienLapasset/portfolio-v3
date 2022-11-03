@@ -1,98 +1,102 @@
 @import "../../styles/media";
 
 .illustration {
-	position: relative;
-	width: 290px;
-	transition: opacity 0.2s ease-out;
+  position: relative;
+  width: 290px;
+  transition: opacity 0.2s ease-out;
+  svg * {
+    transition: fill 0.4s, stroke 0.4s;
+  }
 
-	@include sm {
-		width: 400px;
-	}
+  @include sm {
+    width: 400px;
+  }
 }
 
 .character {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	opacity: 0;
-	animation: fadefromTop 1s forwards, float 1.5s ease-in-out infinite alternate;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadefromTop 1s forwards, float 1.5s ease-in-out infinite alternate;
 
-	&__container {
-		pointer-events: none;
-		position: absolute;
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		width: 110px;
-		top: 30px;
-		left: 103px;
+  &__container {
+    pointer-events: none;
+    position: absolute;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 110px;
+    top: 30px;
+    left: 103px;
 
-		@include sm {
-			top: 60px;
-			left: 140px;
-			width: 150px;
-		}
-	}
+    @include sm {
+      top: 60px;
+      left: 140px;
+      width: 150px;
+    }
+  }
 }
 
 .shadow {
-	opacity: 0;
-	margin-top: 5px;
-	background-color: black;
-	border-radius: 240px / 30px;
-	animation: shadowIn 1s 0.1s forwards, shadow 1.5s 1.1s cubic-bezier(0.4, 0, 0.4, 1) infinite alternate;
-	width: 120px;
-	height: 10px;
-	border-radius: 120px / 10px;
+  opacity: 0;
+  margin-top: 5px;
+  background-color: black;
+  border-radius: 240px / 30px;
+  animation: shadowIn 1s 0.1s forwards,
+    shadow 1.5s 1.1s cubic-bezier(0.4, 0, 0.4, 1) infinite alternate;
+  width: 120px;
+  height: 10px;
+  border-radius: 120px / 10px;
 
-	@include sm {
-		margin-top: 7px;
-		border-radius: 180px / 20px;
-		width: 180px;
-		height: 20px;
-	}
+  @include sm {
+    margin-top: 7px;
+    border-radius: 180px / 20px;
+    width: 180px;
+    height: 20px;
+  }
 }
 
 @keyframes float {
-	from {
-		transform: translateY(0);
-	}
-	to {
-		transform: translateY(-4px);
-	}
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-4px);
+  }
 }
 
 @keyframes shadowIn {
-	from {
-		opacity: 0;
-		transform: scale(0);
-	}
-	to {
-		opacity: 1;
-		transform: scale(0.78);
-		background-color: rgb(50.5, 50.5, 50.5);
-		filter: blur(2px);
-	}
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(0.78);
+    background-color: rgb(50.5, 50.5, 50.5);
+    filter: blur(2px);
+  }
 }
 
 @keyframes shadow {
-	from {
-		transform: scale(0.78);
-		background-color: rgb(51, 51, 51);
-		filter: blur(2px);
-	}
-	to {
-		transform: scale(0.75);
-		background-color: black;
-		filter: blur(1px);
-	}
+  from {
+    transform: scale(0.78);
+    background-color: rgb(51, 51, 51);
+    filter: blur(2px);
+  }
+  to {
+    transform: scale(0.75);
+    background-color: black;
+    filter: blur(1px);
+  }
 }
 
 @keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

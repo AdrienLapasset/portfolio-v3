@@ -3,75 +3,73 @@
 @import "../../styles/animations";
 
 .header {
-	padding: 25px 15px;
-	display: flex;
-	justify-content: space-between;
-	position: absolute;
-	left: 0;
-	right: 0;
-	z-index: 1;
-	background-color: white;
-	box-shadow: 0px 10px 10px 0px white;
+  padding: 25px 15px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
 
-	@include sm {
-		padding: 34px 43px;
-	}
+  @include sm {
+    padding: 34px 43px;
+  }
 
-	&__logo {
-		opacity: 0;
-		display: flex;
-		align-items: center;
-		animation: fadefromTop 0.4s forwards;
+  &__logo {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    animation: fadefromTop 0.4s forwards;
 
-		&__icon {
-			height: 28px;
-			margin-right: 9px;
-		}
-	}
+    &__icon {
+      height: 28px;
+      margin-right: 9px;
+    }
+  }
 
-	&__links {
-		display: flex;
-		& > a {
-			opacity: 0;
-			margin-left: 20px;
-			transition: fill 0.2s, stroke 0.2s;
-			animation: fadefromTop 0.4s forwards;
-			transform: translateY(-10px);
-			fill: $grey;
-			stroke: $grey;
-			width: 25px;
-			@include animationDelay(0.1, 5);
+  &__links {
+    display: flex;
+    & > a {
+      opacity: 0;
+      margin-left: 20px;
+      transition: fill 0.2s, stroke 0.2s;
+      animation: fadefromTop 0.4s forwards;
+      transform: translateY(-10px);
+      fill: $grey;
+      stroke: $grey;
+      width: 25px;
+      @include animationDelay(0.1, 5);
 
-			@include sm {
-				margin-left: 30px;
-			}
+      @include sm {
+        margin-left: 30px;
+      }
 
-			&:hover {
-				fill: black;
-				stroke: black;
-				cursor: pointer;
-			}
+      &:hover {
+        fill: black;
+        stroke: black;
+        cursor: pointer;
+      }
 
-			&:nth-child(3),
-			&:nth-child(4),
-			&:nth-child(5) {
-				display: none;
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        display: none;
 
-				@include sm {
-					display: block;
-				}
-			}
-		}
-	}
+        @include sm {
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 @keyframes fadefromTop {
-	from {
-		transform: translateY(-10px);
-		opacity: 0;
-	}
-	to {
-		transform: translateY(0);
-		opacity: 1;
-	}
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
