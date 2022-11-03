@@ -10,8 +10,10 @@
 
 html,
 body {
+  transition: all 0.4s;
   font-family: "Regular-Semibold";
-  svg {
+  .illustration svg,
+  .header svg {
     fill: black;
     stroke: black;
     .oneZeroBlock {
@@ -39,11 +41,14 @@ body {
       fill: black;
     }
   }
+  .projectBorder {
+    stroke: black;
+  }
   &.dark {
     background-color: black;
     color: white;
-    transition: all 0.4s;
-    svg {
+    .illustration svg,
+    .header svg {
       fill: white;
       stroke: white;
       .oneZeroBlock {
@@ -67,6 +72,29 @@ body {
       .head {
         fill: black;
       }
+    }
+    .Home__contact-btn,
+    .sc-fFubgz {
+      color: black;
+      background-color: white;
+      fill: black;
+      stroke: black;
+    }
+    .sc-jSgupP,
+    .sc-gKsewC {
+      border-color: white;
+      color: white;
+    }
+    .gBMTqX {
+      background-color: black;
+      color: white;
+      border-color: white;
+    }
+    .projectBorder {
+      stroke: white;
+    }
+    a {
+      color: white;
     }
   }
 }
