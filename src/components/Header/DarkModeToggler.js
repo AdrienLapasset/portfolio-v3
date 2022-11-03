@@ -7,10 +7,15 @@ const StyledRay = styled.aside`
   width: 28px;
   background-color: black;
   position: absolute;
-  top: 13px;
-  right: 1px;
   transform: rotate(${(props) => props.angle}deg);
+`;
+
+const StyledRaysContainer = styled.div`
   transition: all 0.4s;
+  transform: translate(-1px, 13px);
+  scale: 1;
+  height: 25px;
+  width: 25px;
 `;
 
 const StyledCheckbox = styled.label`
@@ -32,19 +37,26 @@ const StyledCheckbox = styled.label`
           background-color: white;
         }
       }
-      & ~ ${StyledRay} {
-        width: 0px;
+      & ~ ${StyledRaysContainer} {
+        scale: 0;
       }
     }
   }
 `;
 
 const StyledToggle = styled.div`
-  position: absolute;
-  height: 25px;
-  width: 25px;
-  right: 0;
-  border-radius: 100px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    border-radius: 100px;
+    border: 2px solid white;
+    transition: all 0.4s;
+  }
   &:after {
     content: "";
     position: absolute;
@@ -55,16 +67,6 @@ const StyledToggle = styled.div`
     background-color: white;
     border-radius: 100px;
     transition: all 0.4s;
-  }
-  &:before {
-    content: "";
-    position: absolute;
-    top: 4px;
-    width: 16px;
-    height: 16px;
-    background-color: black;
-    border-radius: 100px;
-    border: 2px solid white;
   }
 `;
 
@@ -93,7 +95,7 @@ const DarkModeToggler = () => {
             onChange={(e) => toggleTheme(e.target.checked ? "dark" : "light")}
             checked={theme === "dark"}
           />
-          {raysRender}
+          <StyledRaysContainer>{raysRender}</StyledRaysContainer>
           <StyledToggle />
         </StyledCheckbox>
       )}
