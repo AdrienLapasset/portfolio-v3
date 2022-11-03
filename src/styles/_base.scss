@@ -11,9 +11,63 @@
 html,
 body {
   font-family: "Regular-Semibold";
+  svg {
+    fill: black;
+    stroke: black;
+    .oneZeroBlock {
+      fill: black;
+    }
+    .rectangleStrips {
+      stroke: white;
+    }
+    .cube {
+      fill: black;
+    }
+    .adrien {
+      stroke: black;
+    }
+    .laptop {
+      fill: black;
+    }
+    .right-leg {
+      fill: white;
+    }
+    .head {
+      fill: white;
+    }
+    .Hair {
+      fill: black;
+    }
+  }
   &.dark {
     background-color: black;
     color: white;
+    transition: all 0.4s;
+    svg {
+      fill: white;
+      stroke: white;
+      .oneZeroBlock {
+        fill: white;
+      }
+      .rectangleStrips {
+        stroke: black;
+      }
+      .cube {
+        fill: white;
+      }
+      .adrien {
+        stroke: white;
+      }
+      .laptop {
+        fill: white;
+      }
+      .right-leg {
+        fill: black;
+      }
+      .head {
+        fill: black;
+      }
+    }
   }
 }
 
