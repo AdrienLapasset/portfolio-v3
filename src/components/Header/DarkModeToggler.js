@@ -60,7 +60,7 @@ const StyledToggle = styled.div`
   &:after {
     content: "";
     position: absolute;
-    left: -3px;
+    left: -1px;
     top: 4px;
     width: 0;
     height: 0;
