@@ -11,16 +11,16 @@ const StyleContainer = styled.section`
     color: ${(props) => props.theme.colors.grey};
     font-size: 14px;
   }
-`;
-const StyledHeart = styled.span`
-  font-size: 10px;
+  span {
+    font-size: 10px;
+  }
 `;
 const StyledBr = styled.br`
   ${breakpoint("sm")`
     display: none;
   `}
 `;
-const StyledAuthor = styled.span`
+const StyledAuthor = styled.aside`
   display: inline-block;
   margin-top: 3px;
   ${breakpoint("sm")`
@@ -42,9 +42,9 @@ const Footer = () => {
         Gatsby
       </a>{" "}
       and{" "}
-      <StyledHeart role="img" aria-label="love">
+      <span role="img" aria-label="love">
         ❤️
-      </StyledHeart>
+      </span>
       <StyledBr />
       <StyledAuthor>© {currentYear} Adrien Lapasset</StyledAuthor>
     </StyleContainer>
