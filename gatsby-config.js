@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Adrien Lapasset",
-    description: `Je suis un développeur créatif (et occasionnellement designer) qui aime les sites
-    responsive, le design minimaliste et les transitions en douceur.`,
+    description: `Développeur et designer web indépendant.`,
     url: `https://alapasset.dev`,
     author: `Adrien Lapasset`,
   },

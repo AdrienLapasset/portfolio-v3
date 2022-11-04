@@ -11,7 +11,7 @@ const IndexPage = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Adrien Lapasset</title>
-        <meta name="description" content="Je suis un développeur créatif (et occasionnellement designer) qui aime les sites responsive, le design minimaliste et les transitions en douceur." />
+        <meta name="description" content="Développeur et designer web indépendant." />
         <meta name="author" content="Adrien Lapasset" />
       </Helmet>
       <App />
