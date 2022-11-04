@@ -4,9 +4,6 @@
   position: relative;
   width: 290px;
   transition: opacity 0.2s ease-out;
-  svg * {
-    transition: fill 0.4s, stroke 0.4s;
-  }
 
   @include sm {
     width: 400px;
