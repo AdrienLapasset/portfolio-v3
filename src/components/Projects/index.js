@@ -92,6 +92,7 @@ const StyledSection = styled.section`
   `}
 `;
 const Styledh2 = styled.h2`
+  font-weight: 400;
   font-size: 30px;
   margin-bottom: 80px;
   text-align: center;
