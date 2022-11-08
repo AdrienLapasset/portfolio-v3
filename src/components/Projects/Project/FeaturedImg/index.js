@@ -38,6 +38,7 @@ const StyledTitle = styled.h3`
   text-transform: capitalize;
   color: white;
   font-size: 35px;
+  font-weight: 400;
   z-index: 1;
   transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 `;
