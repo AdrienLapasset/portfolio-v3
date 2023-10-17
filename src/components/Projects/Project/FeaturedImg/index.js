@@ -30,7 +30,7 @@ const StyledDarken = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   transition: all 0.2s linear;
 `;
 const StyledTitle = styled.h3`
