@@ -14,4 +14,4 @@ repoUrl: https://github.com/LapassetAC/croix-gratiot
 year: 2024.1
 ---
 
-Design et développement du site vitrine et CMS. Le site possède plusieurs parties administrables. Site développé en français et anglais.</a>.
+Design et développement du site vitrine et CMS. Le site possède plusieurs parties administrables. Site développé en français et anglais.
