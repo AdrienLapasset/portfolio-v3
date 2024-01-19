@@ -1,7 +1,7 @@
 ---
 title: Pivot Panda
 featuredImage: pivot-panda.png
-description: Agence d'architecture d'intèrieur
+description: Agence d'architecture d'intérieur
 categories:
   - figma
   - react
